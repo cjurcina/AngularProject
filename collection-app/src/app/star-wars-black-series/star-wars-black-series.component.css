@@ -1,0 +1,68 @@
+/* star-wars-black-seriesComponent's private CSS styles */
+.swbsfigures {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 20em;
+  }
+  
+  .swbsfigures li {
+    display: flex;
+  }
+  
+  .swbsfigures button {
+    flex: 1;
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: 0;
+    border-radius: 4px;
+    display: flex;
+    align-items: stretch;
+  }
+  
+  .swbsfigures button:hover {
+    color: #2c3a41;
+    background-color: #e6e6e6;
+    left: .1em;
+  }
+  
+  .swbsfigures button:active {
+    background-color: #525252;
+    color: #fafafa;
+  }
+  
+  .swbsfigures button.selected {
+    background-color: black;
+    color: white;
+  }
+  
+  .swbsfigures button.selected:hover {
+    background-color: #505050;
+    color: white;
+  }
+  
+  .swbsfigures button.selected:active {
+    background-color: black;
+    color: white;
+  }
+  
+  .swbsfigures .name {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 5px;
+    background-color: #405061;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .swbsfigures .value {
+    align-self: center;
+  }
+
+  .swbsfigures .line {
+    align-self: center;
+  }
