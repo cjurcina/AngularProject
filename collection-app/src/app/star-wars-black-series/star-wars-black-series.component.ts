@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Figure } from '../figure';
+import { SWBSFIGURES } from '../mock-swbsfigures';
 
 @Component({
   selector: 'app-star-wars-black-series',
@@ -7,11 +8,13 @@ import { Figure } from '../figure';
   styleUrls: ['./star-wars-black-series.component.css']
 })
 export class StarWarsBlackSeriesComponent implements OnInit {
-  figure: Figure = {
-    name: 'Darth Vader',
-    value: 30,
-    line: 'Black Series Main Line'
-  };
+  selectedFigure?: Figure;
+  onSelect(figure: Figure): void {
+    this.selectedFigure = figure;
+  }
+
+  swbsfigures = SWBSFIGURES;
+
   constructor() { }
 
   ngOnInit(): void {

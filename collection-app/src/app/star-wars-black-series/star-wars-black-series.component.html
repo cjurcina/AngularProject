@@ -1,7 +1,18 @@
-<h2>{{figure.name | uppercase}}</h2>
-<div>
-    <label for="name">Figure name: </label>
-    <input id="name" [(ngModel)]="figure.name" placeholder="name">
-</div>
-<div><span>value: </span>{{figure.value}}</div>
-<div><span>line: </span>{{figure.line}}</div>
+<h2>My Star Wars The Black Series Figures</h2>
+<ul class = "swbsfigures">
+    <li *ngFor="let figure of swbsfigures">
+        <button [class.selected] = "figure === selectedFigure" type = "button" (click)="onSelect(figure)" >
+            <span class = "name">{{figure.name}}</span>
+            <span class = "value">{{figure.value}}</span>
+            <span class = "line">{{figure.line}}</span>
+        </button>
+    </li>
+</ul>
+<div *ngIf="selectedFigure">
+    <h2>{{selectedFigure.name | uppercase}} Details</h2>
+    <div>value: {{selectedFigure.value}}</div>
+    <div>
+      <label for="figure-name">Figure name: </label>
+      <input id="Figure-name" [(ngModel)]="selectedFigure.name" placeholder="name">
+    </div>
+  </div>
